@@ -49,7 +49,7 @@ sqlite> .quit
 ```
 
 ## Ejecutando
-### Inicializamos el api
+### Inicializamos la api
 En la terminal ejecutar el siguiete comando
 ```
 python cliente.py
