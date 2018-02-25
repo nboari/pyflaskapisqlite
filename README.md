@@ -38,7 +38,6 @@ cliente
 ```
 sqlite> insert into cliente values (1,11111111,"Cliente","Uno");
 sqlite> insert into cliente values (2,22222222,"Cliente","Dos");
-sqlite> select * from cliente
 sqlite> select * from cliente;
 1|11111111|Cliente|Uno
 2|22222222|Cliente|Dos
@@ -53,6 +52,10 @@ sqlite> .quit
 En la terminal ejecutar el siguiete comando
 ```
 python cliente.py
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 302-145-601
 ```
 
 
