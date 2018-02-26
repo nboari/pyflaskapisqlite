@@ -22,7 +22,7 @@ def get_tasks():
     rows = cur.fetchall()
     resp = json.dumps([dict(ix) for ix in rows])
     con.close()
-    return resp
+    return '{ "clientes": ' + resp + '}'
 
 if __name__ == '__main__':
     app.run(debug=True)
