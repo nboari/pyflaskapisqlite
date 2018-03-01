@@ -11,7 +11,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     get = request.url_root + "gimnasio/api/v1.0/clientes"
-    return "GET: <a href='" + get + "'>"+ get + "</a>"
+    get1 = get + "/1"
+    return "GET ALL: <a href='" + get + "'>"+ get + "</a><BR>GET 1: <a href='" + get1 + "'>" + get1 + "</a>"
 
 @app.route('/gimnasio/api/v1.0/clientes', methods=['GET'])
 def get_all():
