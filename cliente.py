@@ -26,16 +26,16 @@ def get_all():
     con.close()
     return '{ "clientes": ' + resp + '}'
 
-@app.route('/gimnasio/api/v1.0/clientes/1', methods=['GET'])
-def get_one():
+@app.route('/gimnasio/api/v1.0/clientes/<id>', methods=['GET'])
+def get_one(id):
     con = sqlite3.connect("gimnasio.db")
     con.row_factory = sqlite3.Row # This enables column access by name: row['column_name']
     cur = con.cursor()
-    cur.execute("select * from cliente where id=1")
+    cur.execute("select * from cliente where id="+id)
     rows = cur.fetchall()
     resp = json.dumps([dict(ix) for ix in rows])
     con.close()
     return '{ "clientes": ' + resp + '}'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)
